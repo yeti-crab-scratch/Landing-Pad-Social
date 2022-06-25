@@ -12,7 +12,7 @@ CREATE TABLE users (
   );
 
   INSERT INTO users (user_name, password, zip)
-  VALUES ('eb', null, 96813)
+  VALUES ('fake', null, 96813)
 
   
   //HOBBY TABLE
