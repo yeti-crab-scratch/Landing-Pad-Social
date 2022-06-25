@@ -1,6 +1,6 @@
 USER TABLE
 
-CREATE TABLE users (
+CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     full_name varchar,
     user_name varchar NOT NULL,
@@ -9,34 +9,34 @@ CREATE TABLE users (
     participant_id int,
     hobby_id int,
     profile_picture_id int
-  );
+);
 
-  INSERT INTO users (user_name, password, zip)
-  VALUES ('fake', null, 96813)
+  INSERT INTO users(user_name, password, zip)
+VALUES('fake', null, 96813)
 
-  
+
   //HOBBY TABLE
-  
+
   //   Table hobby {
   //     id int [pk, increment]
   //     hobby varchar
   //   }
   
-  CREATE TABLE hobby (
+  CREATE TABLE hobby(
     id SERIAL PRIMARY KEY,
     hobby varchar,
-  );
-  
+);
+
   //PARTICPANTS TABLE
   //Table participants as P {
     //     id int [pk, increment] // primary key
     //     name varchar
     //   }
 
-    CREATE TABLE participants (
-      id SERIAL PRIMARY KEY,
-      name varchar
-    );
+    CREATE TABLE participants(
+    id SERIAL PRIMARY KEY,
+    name varchar
+);
 
     //COMMENTS TABLE
     //Table comments as C {
@@ -46,19 +46,19 @@ CREATE TABLE users (
       //     comment varchar
       //   }
 
-      CREATE TABLE comments (
-        id SERIAL PRIMARY KEY,
-        user_name varchar,
-        time TIMESTAMP,
-        comment varchar
-      );
+      CREATE TABLE comments(
+    id SERIAL PRIMARY KEY,
+    user_name varchar,
+    time TIMESTAMP,
+    comment varchar
+);
 
 
 //   Table profile_picture {
 //     id int [pk, increment]
 //     picture varchar
 //   }
-  
+
 //   Ref: U.hobby_id < hobby.id
 //   Ref: U.profile_picture_id - profile_picture.id
 //   Ref: U.user_name - comments.name
@@ -75,7 +75,7 @@ CREATE TABLE users (
 //     comment_id int
 //   }
   
-CREATE TABLE events (
+CREATE TABLE events(
     id SERIAL PRIMARY KEY,
     title varchar,
     date DATE,
@@ -93,8 +93,14 @@ CREATE TABLE events (
 //     id int [pk, increment] // primary key
 //     name varchar
 //   }
-  
-  
+
+
 //   Ref: events.participant_id < participants.id
 //   Ref: U.participant_id > participants.id
 //   Ref: events.comment_id < comments.id
+
+
+//update event
+UPDATE events
+   SET num_participants = num_participants + 1
+WHERE id = 1;
