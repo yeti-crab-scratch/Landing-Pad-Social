@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu Light', 'Century Gothic', sans-serif;
+     margin: 5;
+    padding: 0;
+     color: black;
+     background: lightgrey;
+    text-align: center;
+    font-weight: bold;
+}
+
+#nav {
+    text-align: center;
+    width: 20%;
+    border: 1px solid black;
+    margin: auto;
+}
