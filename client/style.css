@@ -4,14 +4,64 @@
      margin: 5;
     padding: 0;
      color: black;
-     background: lightgrey;
+     /* background: lightgrey; */
     text-align: center;
     font-weight: bold;
 }
 
+body {
+    background-image: url("images/backgroundNature.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #nav {
     text-align: center;
-    width: 20%;
-    border: 1px solid black;
+    font-size: 1.6em;
+    width: 80%;
+    height: 2.5em;
+    border: 2px solid black;
     margin: auto;
+    padding: 2px;
+    padding-top: 10px;
+    background-color: teal;
+    background-image: none;
+
+    position:fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+}
+
+#navText {
+    background: transparent;
+    color: black;
+    margin: 50px
+    
+}
+
+#navSignup {
+    margin-left: 100px;
+    box-shadow: 2px 2px 5px;
+    background: transparentd;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-decoration: none;
+    padding:1px;
+
+    position: fixed;
+    right: 300px;
+}
+
+#eventContainer {
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:4em;
+    background: rgb(245, 227, 204);
+    width: 60%;
+    height: 30em;
+    box-shadow: 10px 10px rgba(34, 34, 34, 0.363);
+    border-radius: 10px;
 }
