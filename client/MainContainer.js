@@ -7,13 +7,15 @@ import { getData } from "./fakedata";
 const array = [0,1,2,3,4,5]
 const data = getData();
 
+
 export default function MainContainer (){
+    const info = data;
      const [eventBox, setEventBox] = useState(data[0]);
-     const eventBoxFeed = array.map(el => 
-        <li key={array.id} className="eventBox">
-            <h2>Hey</h2>
-            
-        </li>
+     const eventBoxFeed = data.map(el => 
+            <EventBox 
+                // onComment={}
+                key={el.name}
+                info={el} />
             )
         return (
             <div className='mainContainer'>

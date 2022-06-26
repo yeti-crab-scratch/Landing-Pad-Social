@@ -4,24 +4,28 @@ import { Outlet, Link } from "react-router-dom"
 
 //class App extends Component {
 export default function EventBox ({
-    data,
+    info,
     onComment,
     onSignUp,
 }){
     
         return (
             <div className='eventBox'>
-              <h2>Host</h2>
+              <h2>Date: {info.name}</h2>
+              <h2>Activity: {info.number}</h2>
+              <h2>Start: {info.amount}</h2>
+              <h2>End: {info.due}</h2>
+              {/* <h2>Host</h2>
               <h2>Date: {data.date}</h2>
               <h2>Activity: {data.activity_type}</h2>
               <h2>Start: {data.start_time}</h2>
               <h2>End: {data.end_time}</h2>
               <h2>comments</h2>
-              <h2>Already Singed up: {data.num_participants}</h2>
+              <h2>Already Singed up: {data.num_participants}</h2> */}
               <button onClick={() => {
-                  onComment(data)
+                  onComment(alert('hello'))
               }}>comment</button>
-              {/* <button onClick={() => {
+              {/* {/* <button onClick={() => {
                   onSignUp(data)
               })>sign up</button> */}
             </div>

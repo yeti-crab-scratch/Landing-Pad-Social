@@ -22,9 +22,10 @@ export default function App (){
             {/* persisting */}
             <Outlet id = "eventContainer"/>
             <div>
-            
+                <MainContainer/>
+            </div>
         </div>
-</div>
+        
 )
 
 }

@@ -13,6 +13,13 @@ body {
     background-image: url("images/backgroundNature.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    /* display: gird;
+    grid-template-columns: auto / repeat(4,1fr);
+    grid-template-areas: 
+    "nav nav nav nav"
+    ". mainContainer mainContainer ."
+    ". mainContainer mainContainer ."
+    ; */
 }
 
 #nav {
@@ -26,6 +33,7 @@ body {
     padding-top: 10px;
     background-color: teal;
     background-image: none;
+    grid-area: nav;
 
     position:fixed;
     top: 100px;
@@ -37,10 +45,13 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    height: 90%;
+    height: 500px;
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 5px;
+    overflow-y: scroll;
+    /* grid-area: mainContainer; */
+
 }
 
 .eventBox {
@@ -51,11 +62,13 @@ body {
     padding-top: 10px;
     background-color: teal;
     background-image: none;
+    border: 1px solid black;
+    border-radius: 9px;
 
-    position:fixed;
+    /* position:fixed;
     top: 100px;
     left: 0;
-    right: 0;
+    right: 0; */
 }
 
 #navText {
