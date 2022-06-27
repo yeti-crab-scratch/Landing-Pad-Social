@@ -96,10 +96,14 @@ body {
     border: 2px solid black;
     margin-left: auto;
     margin-right: auto;
-    margin-top:4em;
-    background: rgb(245, 227, 204);
+    margin-top:8em;
+    background:rgb(245, 227, 204);
     width: 60%;
     height: 30em;
     box-shadow: 10px 10px rgba(34, 34, 34, 0.363);
     border-radius: 10px;
+}
+
+#eventFields {
+    margin: 20px;
 }
