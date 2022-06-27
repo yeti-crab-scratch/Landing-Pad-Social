@@ -50,6 +50,7 @@ export default function EventBox ({
               <h2>Activity: {info.activity_type}</h2>
               <h2>Start: {info.start_time}</h2>
               <h2>End: {info.end_time}</h2>
+<<<<<<< HEAD
               <h2>Number of Participants: {info.num_participants}</h2>
               <h2>Already Signed up: {info.participants}</h2>
               <button id = 'commentButton' onClick={() => {
@@ -59,6 +60,17 @@ export default function EventBox ({
                   handleSubmit()
               }}>Sign up for event</button>
               <input id='signUpInput' placeholder='Enter your name!' onChange = {e => setName(e.target.value)}/>
+=======
+              <h2>Max Number of Participants: {info.num_participants}</h2>
+              <h2>comments</h2>
+              <h2>Already Signed up: {info.num_participants}</h2>
+              <button onClick={() => {
+                  onComment(alert('hello'))
+              }}>Sign Up</button>
+              {/* {/* <button onClick={() => {
+                  onSignUp(data)
+              })>sign up</button> */}
+>>>>>>> front-end
             </div>
         )
     }
