@@ -38,9 +38,13 @@ export default function createEvent() {
        <label id = "eventFields">Max number participants: &nbsp;</label> 
        <input id = "eventFields" onChange = {e => setNumParticipants(e.target.value)} />
       </div>
-
-
-
+      <div>
+       <label id = "eventFields">Zip code: &nbsp;</label> 
+       <input id = "eventFields" onChange = {e => setZip(e.target.value)} />
+      </div>
+      <div>
+       <button id = "submitButton" onClick = {() => handleSubmit()}>Submit Event!</button>
+      </div>
       </div>
     </main>
     )
