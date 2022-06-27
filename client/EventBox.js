@@ -48,10 +48,11 @@ export default function EventBox ({
               <h2>Title: {info.title}</h2>
               <h2>Date: {info.date}</h2>
               <h2>Activity: {info.activity_type}</h2>
+              <h2>Location: {info.location}</h2>
               <h2>Start: {info.start_time}</h2>
               <h2>End: {info.end_time}</h2>
               <h2>Number of Participants: {info.num_participants}</h2>
-              <h2>Already Signed up: {info.participants}</h2>
+              <h2>Sign up list: {info.participants}</h2>
               <button id = 'commentButton' onClick={() => {
                   onComment(alert('hello'))
               }}>Comment</button>
