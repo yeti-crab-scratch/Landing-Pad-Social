@@ -11,11 +11,27 @@ module.exports = {
         publicPath: '/',
     },
 
+    // devServer: {
+    //     static: {
+    //         directory: path.resolve(__dirname,'dist'),
+    //     }
+    // },
+    
     devServer: {
         historyApiFallback: true,
+        //refresh code;
+
         static: {
-            directory: path.resolve(__dirname,'dist'),
-        }
+            // publicPath: '/dist',
+            directory: path.resolve(__dirname, 'dist'),
+
+        },
+        // proxy: {
+        //     '/home': {
+        //         target: 'http://localhost:3000/',
+
+        //     }
+        // }
     },
 
     module: {

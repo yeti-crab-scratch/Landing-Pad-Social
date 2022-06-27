@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, Link } from "react-router-dom"
-import MainContainer from './MainContainer';
+
+
 
 //class App extends Component {
 export default function App (){
@@ -13,17 +14,19 @@ export default function App (){
     return(
         <div>
             <h1>Landing Pad</h1>  
+            
             <nav id = "nav">
                 <Link id = "navText" to="/">Home</Link> |{" "}
                 <Link id = "navText" to="/createEvent">Create Event</Link> |{" "}
                 <Link id = "navText" to="/profile">My Profile</Link>
                 <Link id = "navSignup" to="/signup">Sign up!</Link>
             </nav>
+            {/* <div>
+                <MainContainer/>
+            </div> */}
             {/* persisting */}
             <Outlet id = "eventContainer"/>
-            <div>
-                <MainContainer/>
-            </div>
+            
         </div>
         
 )

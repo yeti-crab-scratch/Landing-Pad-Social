@@ -12,8 +12,12 @@ const createEventRouter = require('./routes/createEventRouter');
 app.use(cors())
 app.use(express.json());
 
+
+
 app.use('/home', homeRouter);
 app.use('/createEvent', createEventRouter)
+
+
 
 // app.get('/', (req,res) => {
 //     console.log(req.body)
