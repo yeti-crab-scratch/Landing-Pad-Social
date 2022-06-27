@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function createEvent() {
+  const [nameX, setName] = useState('');
   const [titleX, setTitle] = useState('');
   const [dateX, setDate] = useState('');
   const [timeStart, setTimeStart] = useState('');
@@ -13,6 +14,9 @@ export default function createEvent() {
   const [numParticipants, setNumParticipants] = useState('');
   const [zipX, setZip] = useState('');
 
+  //show participants
+  //sign up button - input name - add participant list - add to array
+  
 
 function handleSubmit () {
 
@@ -23,8 +27,10 @@ function handleSubmit () {
     end_time: timeEnd,
     activity_type: activityType,
     num_participants: numParticipants,
+    participants:nameX,
     zip: zipX,
   }
+
 
   fetch('http://localhost:3000/createEvent', {
     method: 'POST',
@@ -49,24 +55,29 @@ function handleSubmit () {
 
     return(
     <main>
-        <div id = "eventContainer">
+      <div id = "eventContainer">
          <h1>Create Event Page</h1>
-         <label>Event title: &nbsp;</label> 
-         <input onChange = {e => setTitle(e.target.value)} />
+         <label id = "eventFields">Host name: &nbsp;</label> 
+         <input id = "eventFields" onChange = {e => setName(e.target.value)} />
+      <div>
+        <label id="eventFields">Event title: &nbsp;</label> 
+        <input id = "eventFields" onChange = {e => setTitle(e.target.value)} />
+      </div>
+
       <div>
        <label id = "eventFields">Date: &nbsp;</label> 
-       <input id = "eventFields" onChange = {e => setDate(e.target.value)} />
+       <input id = "eventFields" placeholder='MM/DD/YYYY' onChange = {e => setDate(e.target.value)} />
       </div>
       <div>
        <label id = "eventFields">Time Start: &nbsp;</label> 
-       <input id = "eventFields" onChange = {e => setTimeStart(e.target.value)} />
+       <input id = "eventFields" placeholder='E.g. 13:00' onChange = {e => setTimeStart(e.target.value)} />
 
        <label id = "eventFields">Time End: &nbsp;</label> 
-       <input id = "eventFields" onChange = {e => setTimeEnd(e.target.value)} />
+       <input id = "eventFields" placeholder='E.g. 15:00' onChange = {e => setTimeEnd(e.target.value)} />
       </div>
       <div>
        <label id = "eventFields">Activity Type: &nbsp;</label> 
-       <input id = "eventFields" placeholder='Drop down menu?' onChange = {e => setActivity_type(e.target.value)} />
+       <input id = "eventFields" onChange = {e => setActivity_type(e.target.value)} />
       </div>
       <div>
        <label id = "eventFields">Max number participants: &nbsp;</label> 

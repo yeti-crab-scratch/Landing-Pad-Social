@@ -8,8 +8,12 @@ export default function EventBox ({
     info,
     onComment,
     onSignUp,
-}){
+    onViewParticipants,
+})
+{
     
+
+
         return (
 
             <div className='eventBox'>
@@ -17,6 +21,7 @@ export default function EventBox ({
               <h2>Activity: {info.number}</h2>
               <h2>Start: {info.amount}</h2>
               <h2>End: {info.due}</h2> */}
+              
               <h2>Host</h2>
               <h2>Title: {info.title}</h2>
               <h2>Date: {info.date}</h2>
@@ -24,14 +29,14 @@ export default function EventBox ({
               <h2>Start: {info.start_time}</h2>
               <h2>End: {info.end_time}</h2>
               <h2>Number of Participants: {info.num_participants}</h2>
-              <h2>comments</h2>
               <h2>Already Signed up: {info.num_participants}</h2>
-              <button onClick={() => {
+              <button id = 'commentButton' onClick={() => {
                   onComment(alert('hello'))
-              }}>comment</button>
-              {/* {/* <button onClick={() => {
+              }}>Comment</button>
+             <button id = 'signupEventButton' onClick={() => {
                   onSignUp(data)
-              })>sign up</button> */}
+              }}>Sign up for event</button>
+              <button id="viewParticipants" onClick={() => {alert('hi')}}>View participants</button>
             </div>
         )
     }

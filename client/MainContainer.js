@@ -32,10 +32,11 @@ export default function MainContainer (){
           <h2>Search Bar</h2>
           <ul>{data.map(info => (
               
-        <EventBox
-        key={info.id}
-        info={info}/>
-        ))}
+            <EventBox
+            key={info.id}
+            info={info}/>
+            ))}
+            
          </ul> 
        </div>
     )}
