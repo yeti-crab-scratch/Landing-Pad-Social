@@ -1,19 +1,19 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Ubuntu Light', 'Century Gothic', sans-serif;
-     margin: 5;
-    padding: 0;
-     color: black;
-     /* background: lightgrey; */
-    text-align: center;
-    font-weight: bold;
+  box-sizing: border-box;
+  font-family: 'Ubuntu Light', 'Century Gothic', sans-serif;
+  margin: 5;
+  padding: 0;
+  color: black;
+  /* background: lightgrey; */
+  text-align: center;
+  font-weight: bold;
 }
 
 body {
-    background-image: url("images/backgroundNature.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* display: gird;
+  background-image: url('images/Biking.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* display: gird;
     grid-template-columns: auto / repeat(4,1fr);
     grid-template-areas: 
     "nav nav nav nav"
@@ -23,109 +23,120 @@ body {
 }
 
 #nav {
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.6em;
-    width: 80%;
-    height: 2.5em;
-    border: 2px solid black;
-    margin: auto;
-    padding: 2px;
-    padding-top: 10px;
-    background-color: teal;
-    background-image: none;
-    grid-area: nav;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.6em;
+  width: 80%;
+  height: 2.5em;
+  border: 2px solid black;
+  margin: auto;
+  padding: 2px;
+  padding-top: 10px;
+  background-color: teal;
+  background-image: none;
+  grid-area: nav;
 
-    position:fixed;
-    top: 100px;
-    left: 0;
-    right: 0;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.6em;
+  width: 80%;
+  height: 2.5em;
+  border: 2px solid black;
+  margin: auto;
+  padding: 2px;
+  padding-top: 10px;
+  background-color: teal;
+  background-image: none;
+  grid-area: nav;
+
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
 }
 
 .mainContainer {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    height: 1000px;
-    background-color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 5px;
-    overflow-y: scroll;
-    margin-top:130px;
-    /* grid-area: mainContainer; */
-
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 1000px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow-y: scroll;
+  margin-top: 130px;
+  /* grid-area: mainContainer; */
 }
 
 .eventBox {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding: 2px;
-    padding-top: 10px;
-    background-color: teal;
-    background-image: none;
-    border: 1px solid black;
-    border-radius: 9px;
-    /* /* position:fixed;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 2px;
+  padding-top: 10px;
+  background-color: teal;
+  background-image: none;
+  border: 1px solid black;
+  border-radius: 9px;
+  /* /* position:fixed;
     top: 100px;
     left: 0;
     right: 0; */
-} 
+}
 
 #navText {
-    display: flex;
-    justify-content: center;
-    background: transparent;
-    color: black;
-    margin-right:50px;
-    margin-left:50px
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  color: black;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 #navSignup {
-    margin-right:10.5%;
-    margin-top:0.9%;
-    font-size: 1.8em;
-    position: relative;
-    float:right;
-    box-shadow: 2px 2px 5px;
-    background: transparent;
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid black;
-    text-decoration: none;
-    padding:3px;
-    justify-content:right;
-    align-items: center;
-    height: 50px;
-    width: 130px;
+  margin-right: 10.5%;
+  margin-top: 0.9%;
+  font-size: 1.8em;
+  position: relative;
+  float: right;
+  box-shadow: 2px 2px 5px;
+  background: transparent;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 3px;
+  justify-content: right;
+  align-items: center;
+  height: 50px;
+  width: 130px;
 
-    /* position: fixed;
+  /* position: fixed;
     right: 300px; */
 }
 
 #eventContainer {
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:8em;
-    background:rgb(245, 227, 204);
-    width: 60%;
-    height: 30em;
-    box-shadow: 10px 10px rgba(34, 34, 34, 0.363);
-    border-radius: 10px;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8em;
+  background: rgb(245, 227, 204);
+  width: 60%;
+  height: 30em;
+  box-shadow: 10px 10px rgba(34, 34, 34, 0.363);
+  border-radius: 10px;
 }
 
 #eventFields {
-    margin: 20px;
+  margin: 20px;
 }
 
 #submitButton {
-width: 10em;
-height: 2em;
+  width: 10em;
+  height: 2em;
 }
 
 #submitButton:hover {
-    cursor: pointer;
-    }
-
+  cursor: pointer;
+}
