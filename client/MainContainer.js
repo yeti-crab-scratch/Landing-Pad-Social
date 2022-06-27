@@ -8,30 +8,55 @@ import { useEffect } from 'react';
 
 const data = getData();
 
+
+
 //new get request, the req.params will 
 
 export default function MainContainer (){
     const[data, setData] = useState([]);
+    const[sortType, setSortType] = useState('title');
+
     useEffect(() => {
             const url = 'http://localhost:3000/home'
             const fetchData = async () => {
                     try {
                             const response = await fetch(url);
                             const json = await response.json();
-                            // console.log(json);
                                setData(json)
                         } catch (err) {
                                 console.log("error", error);
                             }
         }
         fetchData();
+    }, [setData]);
 
-    }, setData);
+    useEffect(() => {
+        const sortArray = type => {
+            const types = {
+               title: 'title',
+               date: 'date',
+               activity_type: 'activity_type' 
+            };
+            const sortProperty = types[type];
+            console.log(types[type])
+            const sorted = [...data].sort((a,b) => a[sortProperty].localeCompare(b[sortProperty]));
+
+
+            console.log(sorted)
+            setData(sorted);
+        };
+        sortArray(sortType)
+    }, [sortType]);
+  
+
     return (
         <div className='mainContainer'>
-          <h2>Search Bar</h2>
-          <ul>{data.map(info => (
-              
+        <select onChange={(e) => setSortType(e.target.value)}>
+            <option value="title">Title</option>
+            <option value="date">Date</option>
+            <option value="activity_type">Activity</option>
+        </select>
+          <ul>{data.map(info => (   
         <EventBox
         key={info.id}
         info={info}/>
@@ -39,6 +64,10 @@ export default function MainContainer (){
          </ul> 
        </div>
     )}
+
+
+
+
     // const info = fetchData();
     // console.log(info)
     // const [listItems, setListItems] = useState(Array.from(Arr))
@@ -148,4 +177,25 @@ export default function MainContainer (){
 //         }
 //     </div>
 //   );
+// }
+
+// const DropDownSort = () => {
+//     const dropdownRef = useRef(null);
+//     const [isActive, setIsActive] = useState(false);
+//     const onClick = () => setIsActive(!isActive);
+//     return (
+//         <div className='menu-container'>
+//             <button onClick={onClick} className="menu-trigger">
+//                 <span>Sort By?</span>
+//             </button>
+//             <nav ref={dropdovnRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
+//                 <ul>
+//                     <li>Alphabet</li>
+//                     <li>Date</li>
+//                     <li>Activity</li>
+//                 </ul>
+//             </nav>
+//         </div>
+//     )
+
 // }
