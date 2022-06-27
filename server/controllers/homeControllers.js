@@ -64,7 +64,7 @@ homeController.updateEvent = (req, res, next) => {
 
 homeController.signUp = (req, res, next) => {
   const {name, id} = req.body;
-  const queryStr = `UPDATE events SET participants = ARRAY_APPEND(participants, '${name}') WHERE id = ${id};`;
+  const queryStr = `UPDATE events SET participants = ARRAY_APPEND(participants, '${name} '), num_participants = num_participants - 1 WHERE id = ${id};`;
 
   db.query(queryStr)
     .then(() => {
