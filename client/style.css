@@ -23,6 +23,8 @@ body {
 }
 
 #nav {
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 1.6em;
     width: 80%;
@@ -65,21 +67,23 @@ body {
     border: 1px solid black;
     border-radius: 9px;
 
-    /* position:fixed;
+    /* /* position:fixed;
     top: 100px;
     left: 0;
     right: 0; */
-}
+} 
 
 #navText {
+    display: flex;
+    justify-content: center;
     background: transparent;
     color: black;
-    margin: 50px
+    
     
 }
 
 #navSignup {
-    margin-left: 100px;
+    /* margin-left: 100px; */
     box-shadow: 2px 2px 5px;
     background: transparent;
     background-color: white;
@@ -87,19 +91,39 @@ body {
     border: 1px solid black;
     text-decoration: none;
     padding:1px;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    /* float: right; */
 
-    position: fixed;
-    right: 300px;
+    /* position: fixed;
+    right: 300px; */
 }
 
 #eventContainer {
     border: 2px solid black;
     margin-left: auto;
     margin-right: auto;
-    margin-top:4em;
-    background: rgb(245, 227, 204);
+    margin-top:8em;
+    background:rgb(245, 227, 204);
     width: 60%;
     height: 30em;
     box-shadow: 10px 10px rgba(34, 34, 34, 0.363);
     border-radius: 10px;
 }
+
+#eventFields {
+    margin: 20px;
+}
+
+#submitButton {
+width: 10em;
+height: 2em;
+}
+
+#submitButton:hover {
+    cursor: pointer;
+    }
+
