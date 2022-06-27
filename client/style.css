@@ -129,7 +129,8 @@ body {
 }
 
 #eventFields {
-  margin: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 #submitButton {
@@ -137,6 +138,32 @@ body {
   height: 2em;
 }
 
-#submitButton:hover {
-  cursor: pointer;
+#signupEventButton {
+    font-size: 1.5em;
+    margin-left: 35%;
+    margin-bottom: 1%;
+    box-shadow: 2px 2px 5px;
 }
+
+#commentButton {
+        font-size: 1.5em;
+        box-shadow: 2px 2px 5px;
+    }
+
+#signUpInput {
+    margin-left: 30px;
+}
+
+/* Hover properties */
+#viewParticipants:hover {
+    cursor: pointer;
+        }
+#commentButton:hover {
+    cursor: pointer;
+        }
+#signupEventButton:hover {
+    cursor: pointer;
+        }
+#submitButton:hover {
+    cursor: pointer;
+        }
