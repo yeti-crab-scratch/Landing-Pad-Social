@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Outlet, Link } from "react-router-dom"
+import { useState } from 'react';
 
 
 
@@ -11,7 +12,11 @@ export default function EventBox ({
     onViewParticipants,
 })
 {
-    
+    const [nameX, setName] = useState('');
+
+    function handleSubmit() {
+    const obj = {name:nameX}
+    }
 
 
         return (
@@ -36,7 +41,8 @@ export default function EventBox ({
              <button id = 'signupEventButton' onClick={() => {
                   onSignUp(data)
               }}>Sign up for event</button>
-              <button id="viewParticipants" onClick={() => {alert('hi')}}>View participants</button>
+              <button id="viewParticipants" onClick = {() => handleSubmit()}>View participants</button>
+              <input  placeholder='Enter your name!' onChange = {e => setName(e.target.value)}/>
             </div>
         )
     }
