@@ -23,12 +23,12 @@ export default function EventBox ({
               <h2>Activity: {info.activity_type}</h2>
               <h2>Start: {info.start_time}</h2>
               <h2>End: {info.end_time}</h2>
-              <h2>Number of Participants: {info.num_participants}</h2>
+              <h2>Max Number of Participants: {info.num_participants}</h2>
               <h2>comments</h2>
               <h2>Already Signed up: {info.num_participants}</h2>
               <button onClick={() => {
                   onComment(alert('hello'))
-              }}>comment</button>
+              }}>Sign Up</button>
               {/* {/* <button onClick={() => {
                   onSignUp(data)
               })>sign up</button> */}
