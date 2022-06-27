@@ -23,6 +23,8 @@ body {
 }
 
 #nav {
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 1.6em;
     width: 80%;
@@ -65,31 +67,39 @@ body {
     border: 1px solid black;
     border-radius: 9px;
 
-    /* position:fixed;
+    /* /* position:fixed;
     top: 100px;
     left: 0;
     right: 0; */
-}
+} 
 
 #navText {
+    display: flex;
+    justify-content: center;
     background: transparent;
     color: black;
-    margin: 50px
+    
     
 }
 
 #navSignup {
-    margin-left: 100px;
+    /* margin-left: 100px; */
     box-shadow: 2px 2px 5px;
-    background: transparentd;
+    background: transparent;
     background-color: white;
     border-radius: 10px;
     border: 1px solid black;
     text-decoration: none;
     padding:1px;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    height: 50px;
+    width: 130px;
+    /* float: right; */
 
-    position: fixed;
-    right: 300px;
+    /* position: fixed;
+    right: 300px; */
 }
 
 #eventContainer {
@@ -116,3 +126,4 @@ height: 2em;
 #submitButton:hover {
     cursor: pointer;
     }
+

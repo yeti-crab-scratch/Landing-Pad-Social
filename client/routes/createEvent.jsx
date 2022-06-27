@@ -1,17 +1,51 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function createEvent() {
-  const [title, setTitle] = useState('');
-  const [date, setDate] = useState('');
+  const [titleX, setTitle] = useState('');
+  const [dateX, setDate] = useState('');
   const [timeStart, setTimeStart] = useState('');
   const [timeEnd, setTimeEnd] = useState('');
-  const [activity_type, setActivity_type] = useState('');
+  const [activityType, setActivity_type] = useState('');
   const [numParticipants, setNumParticipants] = useState('');
-  const [zip, setZip] = useState('');
+  const [zipX, setZip] = useState('');
 
+
+function handleSubmit () {
+
+  const obj = {
+    title: titleX,
+    date: dateX,
+    start_time: timeStart,
+    end_time: timeEnd,
+    activity_type: activityType,
+    num_participants: numParticipants,
+    zip: zipX,
+  }
+
+  fetch('http://localhost:3000/createEvent', {
+    method: 'POST',
+
+    headers: {
+      'Content-Type': 'application/json',
+      // x-www-form-urlencoded
+  },
+
+    body: JSON.stringify(obj),
+    
+  })
+  .then(response => response.json())
+  // .then(useNavigate("/success"))
+  .catch(console.log("Error in fetch POST to /createEvent"))
+  
+  console.log(obj);
+
+}
+
+//UPDATE events SET date = '2022-06-26', start_time = '010:00', end_time = '012:00', activity_type = 'Basketball', num_participants = 10, zip = 96813 WHERE id = 1
 
     return(
     <main>

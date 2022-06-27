@@ -7,13 +7,33 @@ module.exports = {
     entry: './client/index.js',
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        //refresh code;
+        // publicPath: '/',
+        //refresh code;
     },
 
+    // devServer: {
+    //     static: {
+    //         directory: path.resolve(__dirname,'dist'),
+    //     }
+    // },
+    
     devServer: {
+        //refresh code;
+        historyApiFallback: true,
+        //refresh code;
         static: {
-            directory: path.resolve(__dirname,'dist'),
-        }
+            // publicPath: '/dist',
+            directory: path.resolve(__dirname, 'dist'),
+
+        },
+        // proxy: {
+        //     '/home': {
+        //         target: 'http://localhost:3000/',
+
+        //     }
+        // }
     },
 
     module: {

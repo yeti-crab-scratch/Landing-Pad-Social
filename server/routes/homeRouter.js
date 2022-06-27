@@ -15,4 +15,6 @@ router.patch('/', homeController.updateEvent, (req, res) => {
     res.status(200).json(res.locals.updatedEvent)
 })
 
+
+
 module.exports = router;
