@@ -21,6 +21,24 @@ homeController.getEvents = (req, res, next) => {
     });
 };
 
+homeController.deleteEvent = (req, res, next) => {
+  const { id } = req.body
+  const queryStr = `DELETE FROM events WHERE id = ${id}`;
+
+  db.query(queryStr)
+    .then((data) => {
+      res.locals.events = data.rows;
+      return next();
+    })
+    .catch((err) => {
+      next({
+        log: 'Error in get events middleware',
+        status: 400,
+        message: 'Error deleting event',
+      });
+    });
+};
+
 homeController.updateEvent = (req, res, next) => {
   const data = req.body;
   const columnNames = Object.keys(data);
