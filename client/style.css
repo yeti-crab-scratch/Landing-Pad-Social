@@ -107,3 +107,12 @@ body {
 #eventFields {
     margin: 20px;
 }
+
+#submitButton {
+width: 10em;
+height: 2em;
+}
+
+#submitButton:hover {
+    cursor: pointer;
+    }
