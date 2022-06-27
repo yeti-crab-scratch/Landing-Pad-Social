@@ -24,6 +24,18 @@ body {
 
 #nav {
   display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.6em;
+  width: 80%;
+  height: 2.5em;
+  border: 2px solid black;
+  margin: auto;
+  padding: 2px;
+  padding-top: 10px;
+  background-color: teal;
+  background-image: none;
+  grid-area: nav;
 
   justify-content: center;
   text-align: center;
@@ -83,12 +95,9 @@ body {
 }
 
 #navSignup {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
   margin-right: 10.5%;
   margin-top: 0.9%;
-  font-size: auto;
+  font-size: 1.8em;
   position: relative;
   float: right;
   box-shadow: 2px 2px 5px;
@@ -99,8 +108,9 @@ body {
   text-decoration: none;
   padding: 3px;
   justify-content: right;
-  height: 40px;
-  width: 100px;
+  align-items: center;
+  height: 50px;
+  width: 130px;
 
   /* position: fixed;
     right: 300px; */
