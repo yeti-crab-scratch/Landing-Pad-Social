@@ -52,6 +52,7 @@ body {
     border: 1px solid black;
     border-radius: 5px;
     overflow-y: scroll;
+    margin-top: 130px;
     /* grid-area: mainContainer; */
 
 }
