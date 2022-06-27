@@ -23,7 +23,7 @@ body {
 }
 
 #nav {
-    display: flex;
+    display:flex;
     justify-content: center;
     text-align: center;
     font-size: 1.6em;
@@ -47,12 +47,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    height: 600px;
+    height: 1000px;
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 5px;
     overflow-y: scroll;
-    margin-top: 130px;
+    margin-top:130px;
     /* grid-area: mainContainer; */
 
 }
@@ -67,7 +67,6 @@ body {
     background-image: none;
     border: 1px solid black;
     border-radius: 9px;
-
     /* /* position:fixed;
     top: 100px;
     left: 0;
@@ -79,25 +78,27 @@ body {
     justify-content: center;
     background: transparent;
     color: black;
-    
-    
+    margin-right:50px;
+    margin-left:50px
 }
 
 #navSignup {
-    /* margin-left: 100px; */
+    margin-right:10.5%;
+    margin-top:0.9%;
+    font-size: 1.8em;
+    position: relative;
+    float:right;
     box-shadow: 2px 2px 5px;
     background: transparent;
     background-color: white;
     border-radius: 10px;
     border: 1px solid black;
     text-decoration: none;
-    padding:1px;
-    display: flex;
+    padding:3px;
     justify-content:right;
     align-items: center;
     height: 50px;
     width: 130px;
-    /* float: right; */
 
     /* position: fixed;
     right: 300px; */
@@ -127,4 +128,3 @@ height: 2em;
 #submitButton:hover {
     cursor: pointer;
     }
-
