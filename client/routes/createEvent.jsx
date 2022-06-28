@@ -70,7 +70,7 @@ function handleSubmit () {
 
       <div>
        <label id = "eventFields">Date: &nbsp;</label> 
-       <input id = "eventFields" placeholder='MM/DD/YYYY' onChange = {e => setDate(e.target.value)} />
+       <input id = "eventFields" placeholder='YYYY-MM-DD' onChange = {e => setDate(e.target.value)} />
       </div>
       <div>
        <label id = "eventFields">Time Start: &nbsp;</label> 
@@ -88,7 +88,8 @@ function handleSubmit () {
        <input id = "eventFields" onChange = {e => setNumParticipants(e.target.value)} />
       </div>
       <div>
-       <button id = "submitButton" onClick = {() => handleSubmit()}>Submit Event!</button>
+       <button id = "submitButton" onClick = {() => { alert("Successfully submitted")
+       handleSubmit()}}>Submit Event!</button>
       </div>
       </div>
     </main>

@@ -58,8 +58,11 @@ export default function EventBox ({
               }}>Comment</button>
              <button id = 'signupEventButton' onClick={() => {
                   handleSubmit()
+                  alert("Successfully submitted")
               }}>Sign up for event</button>
-              <input id='signUpInput' placeholder='Enter your name!' onChange = {e => setName(e.target.value)}/>
+              <input id='signUpInput' placeholder='Enter your name!' onChange = {e => {
+                setName(e.target.value)
+                }}/>
             </div>
         )
     }
