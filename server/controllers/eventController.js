@@ -8,8 +8,8 @@ const eventController = {};
 eventController.createEvent = (req, res, next) => {
     const data = req.body;
 
-    const queryStr = `INSERT INTO events (title, date, start_time, end_time, activity_type, num_participants, zip, participants)
-  VALUES ('${data.title}', '${data.date}', '${data.start_time}', '${data.end_time}', '${data.activity_type}', ${data.num_participants}, ${data.zip},  ARRAY['${data.participants} '])`
+    const queryStr = `INSERT INTO events (title, date, start_time, end_time, activity_type, num_participants, participants, location)
+  VALUES ('${data.title}', '${data.date}', '${data.start_time}', '${data.end_time}', '${data.activity_type}', ${data.num_participants},  ARRAY['${data.participants} '], '${data.location}')`
 
     db.query(queryStr)
         .then(() => {
