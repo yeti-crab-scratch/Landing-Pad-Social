@@ -9,9 +9,18 @@ import CreateEvent from "./routes/createEvent.jsx";
 import Signup from "./components/Signup.jsx";
 import MainContainer from './MainContainer';
 
+//imports for redux below;
+import { Provider } from 'react-redux'
+import store from './store.js'
 
-ReactDOM.render(
- <BrowserRouter>
+//upgrade for react 18
+import { createRoot } from 'react-dom/client'
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
+<Provider store={store}>
+<BrowserRouter>
     <Routes>
             <Route path = "/" element = {<App/>}>
                 <Route path = "/" element = {<MainContainer/>}/>
@@ -26,9 +35,7 @@ ReactDOM.render(
              </Route>
              <Route path = "Signup" element = {<Signup/>}/>
     </Routes>
-</BrowserRouter>,
-
-document.getElementById('root')
-);
+</BrowserRouter>
+</Provider>);
 
 //nest routes to persist - add Outlet in app.js

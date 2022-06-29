@@ -17,19 +17,20 @@ export default function MainContainer (){
     const[data, setData] = useState([]);
     const[sortType, setSortType] = useState('title');
 
+    //fetch data
     useEffect(() => {
-            const url = 'http://localhost:3000/home'
-            const fetchData = async () => {
-                    try {
-                            const response = await fetch(url);
-                            const json = await response.json();
-                               setData(json)
-                        } catch (err) {
-                                console.log("error", error);
-                            }
+        const url = 'http://localhost:3000/home'
+        const fetchData = async () => {
+            try {
+                const response = await fetch(url);
+                const json = await response.json();
+                setData(json)
+            } catch (err) {
+                    console.log("error", error);
+            }
         }
         fetchData();
-    }, [setData]);
+    }, [setData]); //only re render if setData is being called
 
     useEffect(() => {
         const sortArray = type => {
@@ -41,13 +42,11 @@ export default function MainContainer (){
             const sortProperty = types[type];
             console.log(types[type])
             const sorted = [...data].sort((a,b) => a[sortProperty].localeCompare(b[sortProperty]));
-
-
             console.log(sorted)
             setData(sorted);
         };
         sortArray(sortType)
-    }, [sortType]);
+    }, [sortType]); //only run if sortType changes
   
 
     return (
@@ -59,12 +58,7 @@ export default function MainContainer (){
             <option value="date">Date</option>
             <option value="activity_type">Activity</option>
         </select>
-          <ul>{data.map(info => (   
-        <EventBox
-        key={info.id}
-        info={info}/>
-        ))}
-         </ul> 
+          <ul>{data.map(info => (<EventBox key={info.id} info={info}/>))}</ul> 
        </div>
     )}
 
