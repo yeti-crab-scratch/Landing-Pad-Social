@@ -13,7 +13,8 @@ export default function EventBox ({
 })
 {
     const [nameX, setName] = useState('');
-
+//useselector vs usestate
+//usedispatch 
     // console.log(info.participants)
 
 
