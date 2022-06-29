@@ -1,0 +1,48 @@
+@import './_variables.scss';
+
+input {
+    background: transparent;
+}
+
+label {
+    display: inline-block;
+    font-family: Roboto;
+
+    width: 115px;
+}
+
+.logo{
+    height: 300px;
+    width: 300px;
+
+    margin-bottom: 25px;
+}
+
+.submit-btn {
+    height: 24px;
+    border: 1px solid $primary-text-color;
+    border-radius: 6px;
+    background: transparent;
+
+    margin-top: 15px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.log-in-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log-in-sec {
+    margin-bottom: 15px;
+}
+
+.signupContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}

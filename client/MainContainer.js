@@ -4,6 +4,7 @@ import EventBox from "./EventBox"
 import { useState } from 'react';
 import { getData } from "./fakedata";
 import { useEffect } from 'react';
+import Navbar from './components/Navbar.jsx';
 
 
 const data = getData();
@@ -51,6 +52,7 @@ export default function MainContainer (){
 
     return (
         <div className='mainContainer'>
+            {/* <NavBar/> */}
             <label id = "sortText">Sort By: &nbsp;</label>
         <select id="dropDown" onChange={(e) => setSortType(e.target.value)}>
             <option value="title">Title</option>

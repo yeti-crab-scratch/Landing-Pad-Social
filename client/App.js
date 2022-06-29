@@ -1,40 +1,27 @@
 import React from 'react';
 import {Outlet, Link} from 'react-router-dom';
+import Navbar from './components/Navbar.jsx';
+import Login from './components/Login.jsx';
 
-//class App extends Component {
+
 export default function App() {
-  //render() {
 
-  // fetch("http://localhost:3000/")
-  //     .then(response => response.json())
-  //     .then(response => console.log(response));
-  return (
-    <div display="flex">
-      <h1>Yeti Crab Landing Pad</h1>
+  const userLoggedIn = true; // TO BE REPLACED BY STATE
+  if(userLoggedIn){
+    return (
+      <div className='app-container' display="flex">
+        <Navbar/>
+        <h1>Panda Whale</h1>
+        <Outlet id="eventContainer" />
+      </div>
+    );
+  } else{
+    return <Login/>
+  }
 
-      <nav id="nav">
-        <Link id="navText" to="/">
-          Home
-        </Link>{' '}
-        |{' '}
-        <Link id="navText" to="/createEvent">
-          Create Event
-        </Link>{' '}
-        |{' '}
-        <Link id="navText" to="/profile">
-          My Profile
-        </Link>
-      </nav>
-      <Link id="navSignup" to="/signup">
-        Sign up!
-      </Link>
-      {/* <div>
-                <MainContainer/>
-            </div> */}
-      {/* persisting */}
-      <Outlet id="eventContainer" />
-    </div>
-  );
+
+  // Put a check in place for whether user is logged in
+
 }
 
 //         <div>
@@ -53,4 +40,8 @@ export default function App() {
 // }
 //}
 
-//export default App;
+  //render() {
+
+  // fetch("http://localhost:3000/")
+  //     .then(response => response.json())
+  //     .then(response => console.log(response));
